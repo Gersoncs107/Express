@@ -1,5 +1,8 @@
 const express = require("express")
 const app = express()
+const authorRouter = require("./routes/authorRouter")
+const bookRouter = require("./routes/bookRouter")
+const indexRouter = require("./routes/indexRouter")
 
 app.get("/", (req, res)=> res.send("Hello World!"))
 
