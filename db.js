@@ -3,3 +3,7 @@ const authors = [
     {id: 2, name: "Christian"},
     {id: 3, name: "Jason"}
 ]
+
+async function getAuthorById(authorId) {
+    return authors.find( author => author.id === authorId)
+}
