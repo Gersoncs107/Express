@@ -7,3 +7,5 @@ const authors = [
 async function getAuthorById(authorId) {
     return authors.find( author => author.id === authorId)
 }
+
+module.exports = {getAuthorById}
