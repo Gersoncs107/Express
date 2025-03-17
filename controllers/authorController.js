@@ -13,7 +13,8 @@ async function getAuthorById(req, res) {
 
     res.send(`Author Name: ${author.name}`)
     } catch (error) {
-        
+        console.error("Error retrieving author:", error)
+        res.status(500).send("Internal Server Error")
     }
 
     
