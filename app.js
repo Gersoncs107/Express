@@ -3,6 +3,7 @@ const app = express()
 const authorRouter = require("./routes/authorRouter")
 const bookRouter = require("./routes/bookRouter")
 const indexRouter = require("./routes/indexRouter")
+const path = require("node:path")
 
 app.use("/authors", authorRouter)
 app.use("/books",bookRouter)
