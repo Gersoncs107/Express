@@ -3,6 +3,12 @@ const db = require("../db")
 async function getAuthorById(req, res) {
     const {authorId} = req.params
 
+    try {
+        
+    } catch (error) {
+        
+    }
+
     const author = await db.getAuthorById(Number(authorId))
 
     if(!author){

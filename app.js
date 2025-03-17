@@ -8,7 +8,7 @@ app.use("/authors", authorRouter)
 app.use("/books",bookRouter)
 app.use("/", indexRouter)
 
-// app.get("/", (req, res)=> res.send("Hello World!"))
+app.get("/", (req, res)=> res.send("Hello World!"))
 
 const PORT = 3000
 app.listen(PORT, ()=> {
