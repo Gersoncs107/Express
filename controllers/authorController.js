@@ -4,12 +4,7 @@ async function getAuthorById(req, res) {
     const {authorId} = req.params
 
     try {
-        
-    } catch (error) {
-        
-    }
-
-    const author = await db.getAuthorById(Number(authorId))
+        const author = await db.getAuthorById(Number(authorId))
 
     if(!author){
         res.status(404).send("Author not found")
@@ -17,6 +12,11 @@ async function getAuthorById(req, res) {
     }
 
     res.send(`Author Name: ${author.name}`)
+    } catch (error) {
+        
+    }
+
+    
 }
 
 module.exports = {getAuthorById}
