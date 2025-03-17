@@ -1,4 +1,5 @@
 const db = require("../db")
+const asyncHandler = require("express-async-handler")
 
 async function getAuthorById(req, res) {
     const {authorId} = req.params
