@@ -5,6 +5,7 @@ const bookRouter = require("./routes/bookRouter")
 const indexRouter = require("./routes/indexRouter")
 const path = require("node:path")
 const { text } = require("node:stream/consumers")
+const { link } = require("node:fs")
 
 // app.use("/authors", authorRouter)
 // app.use("/books",bookRouter)
@@ -28,7 +29,7 @@ const links = [
 const users = ["Rose", "Cake", "Biff"]
 
 app.get("/", (req, res) => {
-    res.render("index", {message: "EJS Rocks!"} )
+    res.render("index", {links: links, users: users} )
 })  
 
 app.use((err, req, res, next) => {
