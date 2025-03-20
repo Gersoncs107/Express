@@ -4,6 +4,7 @@ const authorRouter = require("./routes/authorRouter")
 const bookRouter = require("./routes/bookRouter")
 const indexRouter = require("./routes/indexRouter")
 const path = require("node:path")
+const { text } = require("node:stream/consumers")
 
 // app.use("/authors", authorRouter)
 // app.use("/books",bookRouter)
@@ -18,6 +19,11 @@ const PORT = 3000
 app.listen(PORT, ()=> {
     console.log(`My first Express app - listening on port ${PORT}!`)
 })
+
+const links = [
+    {href: "/", text: "Home"},
+    {href: "/about", text: "About"}
+]
 
 app.get("/", (req, res) => {
     res.render("index", {message: "EJS Rocks!"} )
