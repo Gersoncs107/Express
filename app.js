@@ -22,7 +22,7 @@ app.listen(PORT, ()=> {
 
 const links = [
     {href: "/", text: "Home"},
-    {href: "/about", text: "About"}
+    {href: "about", text: "About"}
 ]
 
 app.get("/", (req, res) => {
