@@ -6,7 +6,7 @@
   <body>
     <ul>
       <% users.forEach( user => {%>
-        <%-  %>
+        <%- include('user', {user:user}) %>
       <% }) %>
     </ul>
     <%- include('navbar', {links: links}) %>
