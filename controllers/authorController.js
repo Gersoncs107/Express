@@ -15,3 +15,5 @@ const getAuthorById = asyncHandler(async (req, res) => {
   });
 
 module.exports = {getAuthorById}
+
+// ends
