@@ -8,7 +8,7 @@ const { text } = require("node:stream/consumers")
 const { link } = require("node:fs")
 const assetsPath = path.join(__dirname, "public")
 
-app.use(express.static(assetsPath))
+
 // app.use("/authors", authorRouter)
 // app.use("/books",bookRouter)
 // app.use("/", indexRouter)
@@ -33,6 +33,8 @@ const users = ["Rose", "Cake", "Biff"]
 app.get("/", (req, res) => {
     res.render("index", {links: links, users: users} )
 })  
+
+app.use(express.static(assetsPath))
 
 app.use((err, req, res, next) => {
     console.error(err);
